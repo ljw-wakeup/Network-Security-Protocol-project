@@ -1,5 +1,29 @@
 add titles of papers in this file.
 
+**Application Layer - email remains to be discussed.**
+
+LI:
+
+[Athanasios Kountouras, Panagiotis Kintis, Chaz Lever, Yizheng Chen, Yacin Nadji, David Dagon, Manos Antonakakis, Rodney Joffe:
+Enabling Network Security Through Active DNS Datasets. 188-208](https://doi.org/10.1007/978-3-319-45719-2_9)
+
+[Sajjad Arshad, Amin Kharraz, William Robertson:
+Identifying Extension-Based Ad Injection via Fine-Grained Web Content Provenance. 415-436](https://doi.org/10.1007/978-3-319-45719-2_19)
+
+LIN:
+
+[Detecting TCP-Based DDoS Attacks in Baidu Cloud Computing Data Centers](https://ieeexplore.ieee.org/document/8069091)
+
+[Intrusion Detection by Deep Learning with TensorFlow](https://ieeexplore.ieee.org/document/8701969)
+
+HU:
+
+[Ivan Torroledo, Luis David Camacho, Alejandro Correa Bahnsen:
+Hunting Malicious TLS Certificates with Deep Neural Networks. 64-73](https://doi.org/10.1145/3270101.3270105)
+
+[Peter Schneider, Konstantin Böttinger:
+High-Performance Unsupervised Anomaly Detection for Cyber-Physical System Networks. 1-12](https://doi.org/10.1145/3264888.3264890)
+
 # 3 CSS
 
 ## AISec workshop
