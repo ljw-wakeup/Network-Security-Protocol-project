@@ -51,7 +51,7 @@ Backdoors: Definition, Deniability and Detection. 92-113](https://doi.org/10.100
 [Shagufta Mehnaz, Anand Mudgerikar, Elisa Bertino:
 RWGuard: A Real-Time Detection System Against Cryptographic Ransomware. 114-136](https://doi.org/10.1007/978-3-030-00470-5_6)
 
-## 20. RAID 2017 - Intrusion Detection
+## 20th RAID 2017 - Intrusion Detection
 
 [Ahmet Salih Buyukkayhan, Alina Oprea, Zhou Li, William K. Robertson:
 Lens on the Endpoint: Hunting for Malicious Software Through Endpoint Data Analysis. 73-97](https://doi.org/10.1007/978-3-319-66332-6_4)
@@ -62,7 +62,7 @@ Redemption: Real-Time Protection Against Ransomware at End-Hosts. 98-119](https:
 [Anaël Beaugnon, Pierre Chifflier, Francis Bach:
 ILAB: An Interactive Labelling Strategy for Intrusion Detection. 120-140](https://doi.org/10.1007/978-3-319-66332-6_6)
 
-##
+## 19th RAID 2016
 
 Low-Level Attacks and Defenses
 
