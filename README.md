@@ -15,3 +15,23 @@
 提交报告请在文末列出详细的参考文献，同时在文中的引用处进行标注。
 
 材料必须是在自己读懂的基础上进行总结的，而不是直接翻译，同时不要将报告变成科普，需要有深度具有学术性。
+
+## 文章框架
+
+### APP LAYER:
+
+1. **Protocol**: DNS(**remain futher exploration**), HTTPS;
+
+2. **content**: AD INJECTION;
+
+### TRANS/IP:
+
+1. **Machine learning**: TLS, flow data;
+
+2. **non-ML**: **remain futher exploration**
+
+### DL/PHY:
+
+1. **DL**: autoencoder;
+
+2. **PHY**:  **remain futher exploration** (wireless)

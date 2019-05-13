@@ -1,5 +1,3 @@
-add titles of papers in this file.
-
 **Application Layer - email remains to be discussed.**
 
 LI:
