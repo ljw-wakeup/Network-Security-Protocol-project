@@ -20,18 +20,22 @@
 
 ### APP LAYER:
 
-1. **Protocol**: DNS(**remain futher exploration**), HTTPS;
+1. **Protocol**: DNS(DGA), HTTPS;
 
-2. **content**: AD INJECTION;
+2. **content**: AD INJECTION, SPOOF EMAIL;
 
 ### TRANS/IP:
 
 1. **Machine learning**: TLS, flow data;
 
-2. **non-ML**: **remain futher exploration**
+2. **non-ML**: IP ENTROPY, Traceroute-DoS, PFA;
 
 ### DL/PHY:
 
 1. **DL**: autoencoder;
 
-2. **PHY**:  **remain futher exploration** (wireless)
+2. **PHY**:  Wireless;
+
+### FUTHER WORK
+
+**to be disscussed ...**

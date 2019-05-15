@@ -1,3 +1,5 @@
+# 2019-5-12
+
 ## Ivan Torroledo, Luis David Camacho, Alejandro Correa Bahnsen: Hunting Malicious TLS Certificates with Deep Neural Networks. 64-73
 
 https://doi.org/10.1145/3270101.3270105
@@ -56,7 +58,7 @@ evaluated on Modbus and Secure Water Treatment (SWaT) database Common Industrial
 
 [32-2] Jiexin Zhang, Shaoduo Gan, Xiaoxue Liu, and Peidong Zhu. 2016. Intrusion detection in SCADA systems by traffic periodicity and telemetry analysis. In 2016 IEEE Symposium on Computers and Communication (ISCC). IEEE, 318–325.
 
-# LIN
+## LIN
 
 APP LAYER non-ML: DPI, more information with lower cost + details in another paper, tunnel HTTP (many connnection), need payload; take first few bytes
 
@@ -64,8 +66,48 @@ APP LAYER non-ML: DPI, more information with lower cost + details in another pap
 
 TCP/IP ML: use only header information -> network **flow** data -> models
 
-# LI
+## LI
 
 DNS database: DNS attacks - (analyse papers are needed to be read)
 
 Web extensions ad injection: DOM; triple -> intergrity model
+
+# 2019-5-15
+
+[Michael Backes, Thorsten Holz, Christian Rossow, Teemu Rytilahti, Milivoj Simeonovski, Ben Stock: On the Feasibility of TTL-Based Filtering for DRDoS Mitigation. 303-322](https://link.springer.com/chapter/10.1007%2F978-3-319-45719-2_14)
+
+TTL-based countermeasures for DRDoS is not workable.
+
+[Practical and Accurate Runtime Application Protection Against DoS Attacks](https://link.springer.com/chapter/10.1007%2F978-3-319-66332-6_20)
+
+APP layer; Finite automated machine / tree
+
+[Quentin Jacquemart, Pierre-Antoine Vervier, Guillaume Urvoy-Keller, Ernst W. Biersack: Demystifying the IP Blackspace. 111-132](https://link.springer.com/chapter/10.1007%2F978-3-319-26362-5_6)
+
+Bogon is an informal term used to describe IP packets on the public Internet that claim to be from an area of the IP address space reserved, but not yet allocated or delegated by the Internet Assigned Numbers Authority (IANA) or any of the Regional Internet Registries (RIR).
+
+[Samuel Jero, Md. Endadul Hoque, David R. Choffnes, Alan Mislove, Cristina Nita-Rotaru: Automated Attack Discovery in TCP Congestion Control Using a Model-guided Approach.](https://dblp.uni-trier.de/db/conf/ndss/ndss2018.html)
+
+a **state machine model** of TCP congestion control to find vulnerable state machine paths that an attacker could exploit
+
+[Synflood Spoofed Source DDoS Attack Defense Based on Packet ID Anomaly Detection with Bloom Filter](https://ieeexplore.ieee.org/abstract/document/8593121)
+
+TCP, bloom filter
+
+[Akshat Gaurav, Awadhesh Kumar Singh, "Entropy-score: A method to detect DDoS attack and flash crowd", 2017 2nd IEEE International Conference on Recent Trends in Electronics Information & Communication Technology, May, 2017.](https://ieeexplore.ieee.org/document/8256833)
+
+Akshat Gaurav et al. (2017) proposed a DDoS attack detection method based on source **IP address entropy**. The basic idea of this method is that when the system is under a DDoS attack, the number of connections with different source IP addresses increases significantly compared to when the system is not. The method calculates the entropy for each group of source IP addresses. Two thresholds, threshold1 and threshold2, are used to determine when a DDoS attack occurs and which packets are malicious. The threshold1 is computed by the calculated entropy of each group and the threshold2 is computed by the Load Shedding algorithm.
+
+[Traceroute-based target link flooding attack detection scheme by analyzing hop count to the destination](https://ieeexplore.ieee.org/abstract/document/8304023)
+
+ICMP, TTL
+
+[UWB with Pulse Reordering: Securing Ranging against Relay and Physical-Layer Attacks](https://www.ndss-symposium.org/ndss-paper/uwb-with-pulse-reordering-securing-ranging-against-relay-and-physical-layer-attacks/)
+
+PHY layer. A enhancement for 802.15.4z Low Rate Pulse standard in security aspect.
+
+---
+
+TCP: Automated Attack Discovery,
+
+IP/ICMP: Entropy-score, Traceroute-based target link flooding attack detection scheme;
