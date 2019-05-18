@@ -38,4 +38,53 @@
 
 ### FUTHER WORK
 
-**to be disscussed ...**
+1. DNS database -> data resource / data labeling for ML algorithms
+    AGA - attack generate algorithm
+
+2. ATM / MLPS - state-based network IDS
+    easy to detect
+
+3. APP layer too many various kinds - middleware; no many methods on direct DL layer and PHY;
+    multiple layer co-operate
+
+4. IDS facing: 3 attacks unknow attack - update + specific attack
+
+5. non-proba - information theory - information network
+
+    graph
+
+    true negative; false positive - theoritical limitation
+
+    adverisary AI
+
+## 分工
+
+### LIN:
+
+APP LAYER: HTTPS, EMAIL
+
+TRANS/IP: 网络流数据
+
+DL/PHY: 无线
+
+FUTHER WORK：5(非概率方法)
+
+DL/PHY 导言
+
+### LI:
+
+APP LAYER: DNS(DGA), 广告插入
+
+FUTHER WORK: 1(数据) 2(面向连接网络) 4(3种攻击)
+
+APP LAYER 导言
+
+### HU:
+
+TRANS/IP: TLS, IP ENTROPY, Traceroute-DoS, PFA
+
+DL/PHY: autoencoder
+
+TRANS/IP导言
+
+FUTHER WORK: 3(不同层)

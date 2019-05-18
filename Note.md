@@ -111,3 +111,55 @@ PHY layer. A enhancement for 802.15.4z Low Rate Pulse standard in security aspec
 TCP: Automated Attack Discovery,
 
 IP/ICMP: Entropy-score, Traceroute-based target link flooding attack detection scheme;
+
+# 2019-5-18
+
+DNS: 僵尸网络 恶意DNS服务器 - 感染用户 - DNS服务在解析的时候回进行攻击
+
+blacklist -> DGA
+    seed -> domain name -> at server / at client
+
+reverse engineering (nowadays)
+
+non-existing domain name - compare with known DGA
+
+
+Entropy-score: entrophy and score; flash crowd & DDoS attack
+
+future work: real-time
+
+?
+
+FOR ML METHODS
+
+data scource - from the paper of DNS database
+
+FOR FUTURE NETWORK
+
+ATM network defense
+
+FOR LAYER
+
+no many methods on direct DL layer;
+
+APP layer too many various kinds
+
+
+**FUTURE WORK**
+
+1. DNS database -> data resource / data labeling for ML algorithms
+    AGA - attack generate algorithm
+
+2. ATM / MLPS - state-based network IDS
+    easy to detect
+
+3. APP layer too many various kinds - middleware; no many methods on direct DL layer and PHY;
+    multiple layer co-operate
+
+4. IDS facing: unknow attack - update + specific attack
+
+5. non-proba - information theory - information network
+
+    true negative; false positive - theoritical limitation
+
+    adverisary AI
