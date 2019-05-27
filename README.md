@@ -61,7 +61,7 @@
 
 ### LIN:
 
-APP LAYER: HTTPS, EMAIL
+APP LAYER: HTTPS请求检测恶意软件, EMAIL，HTTPS载荷聚合检测
 
 TRANS/IP: 网络流数据
 
