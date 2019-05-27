@@ -163,7 +163,7 @@ Hugo（2018）提出了一种基于发送者的邮件结构和设置信息，使
 
 \textbf{TLS certificate}
 
-I. Torroledo等人(2018)实现了第一个利用TLS协议的钓鱼攻击检测。由于TLS协议中数据报被加密，因此难以利用数据信息进行检测。该方法利用TLS协议中的证书信息进行钓鱼攻击检测，作者依据其所在单位多年的经验总结了35个与TLS证书相关的特征，使用单热编码方案对特征进行编码，编码后的向量输入神经网络进行学习。
+I. Torroledo等人(2018)\cite{tls}实现了第一个利用TLS协议的钓鱼攻击检测。由于TLS协议中数据报被加密，因此难以利用数据信息进行检测。该方法利用TLS协议中的证书信息进行钓鱼攻击检测，作者依据其所在单位多年的经验总结了35个与TLS证书相关的特征，使用单热编码方案对特征进行编码，编码后的向量输入神经网络进行学习。
 
 神经网络由三部分并行构成，两部分是LSTM网络，用来处理证书中与颁发主体和颁发机构相关的信息，另一部分是全连接网络，用来处理从证书中提取出的35条特征。三部分的输出结果构成新的输入输进全连接网络，得到最终的评分。该评分标志着干网站属于恶意网站的概率。
 
@@ -180,7 +180,7 @@ Navaporn实现了在不需要人工指定规则的前提下，使用深度学习
 
 \textbf{Entropy-score}
 
-Akshat Gaurav等人(2017)提出了一种基于熵和评分机制的层次性DDoS攻击检测方法。该方法基于这样一个观察:在DDoS攻击期间，服务器接收到的包中源IP地址的熵值会比平常要高。该方法同时解决了如何将DDoS攻击与特定时段用户的大量访问进行区分的问题。
+Akshat Gaurav等人(2017)\cite{entropy}提出了一种基于熵和评分机制的层次性DDoS攻击检测方法。该方法基于这样一个观察:在DDoS攻击期间，服务器接收到的包中源IP地址的熵值会比平常要高。该方法同时解决了如何将DDoS攻击与特定时段用户的大量访问进行区分的问题。
 
 接收到的数据包会按照预先设置好的一些中心值进行分组，分组的依据是到源IP该值的距离。熵由各组的经验概率计算；分数由当前该组的概率与历史记录中的概率相除得到。如果最近一段时间内源IP的熵大于阈值，那说明系统目前可能遭遇DDoS攻击，但也有可能是用户的正常访问；如果小于阈值，当前数据会被记录下来更新分数表。接着，计算各组的分数，如果分数高于阈值，说明发生了DDoS攻击，不然则是正常的用户访问。
 
@@ -188,7 +188,7 @@ Akshat Gaurav等人(2017)提出了一种基于熵和评分机制的层次性DDoS
 
 \textbf{Traceroute-based}
 
-K. Sakuma等人(2017)介绍了一种应对新型DDoS攻击——目标链路泛洪攻击(Target link flooding attack)的方法。该方法利用traceroute进行检测。目标链路泛洪攻击不直接针对目标区域发起DDoS攻击，而是对互联网中特定的链路进行攻击，从而将目标区域与其他区域隔离。
+K. Sakuma等人(2017)\cite{traceroute}介绍了一种应对新型DDoS攻击——目标链路泛洪攻击(Target link flooding attack)的方法。该方法利用traceroute进行检测。目标链路泛洪攻击不直接针对目标区域发起DDoS攻击，而是对互联网中特定的链路进行攻击，从而将目标区域与其他区域隔离。
 
 该方法的提出考虑到为实现这种攻击，攻击者需要对目标区域附近的网络拓扑结构进行探测。这就需要攻击者发送大量traceroute包，且这些包会集中在距离目标服务器若干跳的范围内。因此通过分析traceroute及其距离目标服务器的跳数即可对该类型DDoS攻击进行探测。
 
@@ -198,7 +198,7 @@ K. Sakuma等人(2017)介绍了一种应对新型DDoS攻击——目标链路泛�
 
 \textbf{Automated Attack Discovery in TCP Congestion}
 
-Samuel Jero等人(2018)提出了一种基于有限状态机的TCP拥塞攻击发现方法。该方法受基于模型的测试(MBT)和模糊测试启发，利用TCP拥塞控制中的有限状态机作为模型指导模糊测试，从而发现新的攻击方式。
+Samuel Jero等人(2018)\cite{fsm}提出了一种基于有限状态机的TCP拥塞攻击发现方法。该方法受基于模型的测试(MBT)和模糊测试启发，利用TCP拥塞控制中的有限状态机作为模型指导模糊测试，从而发现新的攻击方式。
 
 首先，该方法在有限状态机中寻找所有的可能攻击路线；然后将该路线转换成实际的攻击动作与数据包。这两部分别被称作抽象攻击策略与具体攻击策略。接着，作者在虚拟网络中进行了攻击测试，以判断该具体攻击策略是否确实显著地影响了网络流量。通过对可行的攻击策略进行分类，作者总结了11种TCP拥塞攻击，其中8种是目前文献中未被报道过的。
 
@@ -209,7 +209,7 @@ Samuel Jero等人(2018)提出了一种基于有限状态机的TCP拥塞攻击发
 
 \textbf{Cyber-Physical System Networks}
 
-Peter Schneider等人(2018)提出了一个可对多种现场总线协议进行异常检测的实时、统一平台。该方法直接利用线路中的字节流数据进行异常检测，因此对多种上层协议有通用性。作者提出的检测方法是，将线路中的数据包按照定长进行划分，将每一个划分的字节流作为向量输入到层叠的去噪自动编码机中。其中，层叠指隐含层是多层的，去噪是指在训练时会对训练记得数据人工添加噪声，以避免过拟合。
+Peter Schneider等人(2018)\cite{cyber_phy}提出了一个可对多种现场总线协议进行异常检测的实时、统一平台。该方法直接利用线路中的字节流数据进行异常检测，因此对多种上层协议有通用性。作者提出的检测方法是，将线路中的数据包按照定长进行划分，将每一个划分的字节流作为向量输入到层叠的去噪自动编码机中。其中，层叠指隐含层是多层的，去噪是指在训练时会对训练记得数据人工添加噪声，以避免过拟合。
 
 自动编码机的架构包含编码机和解码机，训练时二者成对的被训练。损失函数定义为由解码机恢复的向量与原向量之间均方误差。对于正常的字节流，该编码机输出的向量与原始数据之间会有很小的均方误差；而对于异常数据，编码机的输出会有明显的误差。在给定阈值的情况下，只要是高于阈值的数据流都被判断为存在异常。
 
@@ -314,11 +314,19 @@ Eduard（2015）提出了一种运作于使用IEEE 802.11协议的局域网上�
 
 \begin{thebibliography}{99}
 
-\bibitem{otsu} Otsu, N., "A Threshold Selection Method from Gray-Level Histograms." IEEE Transactions on Systems, Man, and Cybernetics. Vol. 9, No. 1, 1979, pp. 62–66.s
+\bibitem{Manos} Antonakakis, M., April, T., Bailey, M., Bernhard, M., Bursztein, E., Cochran, J., ... \& Kumar, D. (2017). Understanding the mirai botnet. In 26th {USENIX} Security Symposium ({USENIX} Security 17) (pp. 1093-1110)
 
-\bibitem{Manos} Antonakakis, M., April, T., Bailey, M., Bernhard, M., Bursztein, E., Cochran, J., ... & Kumar, D. (2017). Understanding the mirai botnet. In 26th {USENIX} Security Symposium ({USENIX} Security 17) (pp. 1093-1110)
+\bibitem{Arshad} Arshad, S., Kharraz, A., \& Robertson, W. (2016, September). Identifying extension-based ad injection via fine-grained web content provenance. In International Symposium on Research in Attacks, Intrusions, and Defenses (pp. 415-436). Springer, Cham.
 
-\bibitem{Arshad} Arshad, S., Kharraz, A., & Robertson, W. (2016, September). Identifying extension-based ad injection via fine-grained web content provenance. In International Symposium on Research in Attacks, Intrusions, and Defenses (pp. 415-436). Springer, Cham.
+\bibitem{tls} Torroledo, I., Camacho, L. D., \& Bahnsen, A. C. (2018, October). Hunting Malicious TLS Certificates with Deep Neural Networks. In Proceedings of the 11th ACM Workshop on Artificial Intelligence and Security (pp. 64-73). ACM.
+
+\bibitem{cyber_phy} Schneider, P., \& Böttinger, K. (2018, October). High-Performance Unsupervised Anomaly Detection for Cyber-Physical System Networks. In Proceedings of the 2018 Workshop on Cyber-Physical Systems Security and PrivaCy (pp. 1-12). ACM.
+
+\bibitem{traceroute} Sakuma, K., Asahina, H., Haruta, S., \& Sasase, I. (2017, December). Traceroute-based target link flooding attack detection scheme by analyzing hop count to the destination. In 2017 23rd Asia-Pacific Conference on Communications (APCC) (pp. 1-6). IEEE.
+
+\bibitem{entropy} Gaurav, A., \& Singh, A. K. (2017, May). Entropy-score: A method to detect DDoS attack and flash crowd. In 2017 2nd IEEE International Conference on Recent Trends in Electronics, Information \& Communication Technology (RTEICT) (pp. 1427-1431). IEEE.
+
+\bibitem{fsm} Jero, S., Hoque, E., Choffnes, D., Mislove, A., \& Nita-Rotaru, C. (2018, July). Automated attack discovery in TCP congestion control using a model-guided approach. In Proceedings of NDSS.
 
 \end{thebibliography}
 
