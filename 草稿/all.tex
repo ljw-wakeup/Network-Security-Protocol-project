@@ -21,8 +21,7 @@
 
 \usepackage{graphicx} % support the \includegraphics command and options
 
-
-% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
 
 %%% PACKAGES
 \usepackage{booktabs} % for much better looking tables
@@ -35,7 +34,7 @@
 % \usepackage{setspace}
 % \linespread{1.5}
 
-\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\baselinestretch}{1.2}
 
 \usepackage{xeCJK}
 \usepackage{listings}
@@ -100,7 +99,11 @@ Manos针对基于DGA的DNS攻击，提出了根据NXDomian流量来检测恶意�
 
 因此本文作者提出了根据NXDomian流量来检测恶意域名的方法。NXDomian是在用户所查询的域名无法解析时服务器产生的响应。由DGA的原理，由一个种子所产生的大量域名，只会有一小部分被注册到恶意服务器的IP地址，因此被感染的僵尸主机在查询由DGA产生的域名时必然会产生大量NXDomian流量。这个方法之所以可行，是因为由同一个DGA，同一个种子所产生的一系列域名，会有各种相同的特征。这也就是说，只要分析出由同一种子生成的NXDomain的特征，就可以利用这些特征去检测由这个种子生成的，真正被注册到恶意DNS服务器的域名了。利用这一点，作者提出了如下检测模型
 
-% picture
+\begin{figure}
+	\caption{Pleiades系统示意图}
+	\label{dga_pic}
+	\includegraphics[width = \linewidth]{./pics/dga}
+\end{figure}
 
 此模型被部署在本地的DNS服务器。在这里，它首先会收集NXDomian流量，对这些域名进行特征提取并分析。若遇到了特征相似的一系列域名，则将它们聚合起来，并与已知DGA作比较，若吻合，则将它们归类到那一种DGA中；若不吻合，则将这一类特征归为新的DGA，并对其建模、存储，留待与之后收集到的域名作比较。当完成这样的工作后，由某个DGA所产生的恶意域名会大概率被检测到与某一个DGA的特征相吻合，从而可以将它列入黑名单中。
 
@@ -144,8 +147,6 @@ I. Torroledo等人(2018)实现了第一个利用TLS协议的钓鱼攻击检测�
 \textbf{只使用了报头}
 
 Navaporn实现了在不需要人工指定规则的前提下，使用深度学习算法检测网络攻击的方法。该方法只使用了报头的相关信息，并不涉及到载荷，以此保护数据隐私。在数据预处理中，先将通过tcpdump命令获得的pcap格式流量，并删除了数据包的有效负载。然后将包数据转换为流数据。流数据不同于包数据。通常，流数据会包含多个包的信息，而这些包共享一个流数据的标签。流数据是其覆盖的某个通信下的数据包的统计量和基础信息的总结，网络流的元数据包括IP地址，持续状态，历史状态以及包速度，字节速度供16个特征等等。在该文章的方法中，使用网络流的16个元数据作为特征供神经网络训练。为了检测和对攻击方式进行分类，该文章使用了RNN, Staked RNN, CNN神经网络进行训练，并检测了Dos攻击， 端口扫描，使用UDP发网络扫描，使用TCP的网络扫描，以及使用ICMP的网络扫描这五种攻击，并实现了对这些攻击的分类。同时，为了进行比较，将同样的数据包放到Snort系统中检测。Snort是一个基于规则的入侵检测系统，但是其使用载荷信息进行分析，并且计算的时间很长。测试结果表明，该方案优于基于规则的Snort入侵检测系统。
-
-\textbf{}
 
 \subsubsection{使用非ML方法的}
 \label{nonml}
@@ -223,7 +224,7 @@ Eduard（2015）提出了一种运作于使用IEEE 802.11协议的局域网上�
 \subsection{各层之间}
 \label{layer}
 
-1. 应用层IDS缺少统一性方案
+\textbf{1. 应用层IDS缺少统一性方案}
 
 在本文涉及的文章中，面对DNS服务、HTTPS协议、浏览器插件广告插入以及电子邮件等，解决的方案都是特定的、针对性的。这是受应用层特性决定的:由于应用层希望为用户提供多种多样的服务，因此应用的数据格式高度分化，很难找到统一的监测方案。是否能找到一种通用性的解决方案为应用层提供更好的安全保障呢？
 
@@ -231,7 +232,7 @@ Eduard（2015）提出了一种运作于使用IEEE 802.11协议的局域网上�
 
 是否可以设计一种能满足多种不同应用层需求的协议？它可以灵活的组装各种模块，就像IPSec中的IKE一样，可以为差异很大的不同应用提供服务；而它又可以有效地被IDS检测和分析。这种\textbf{中间件安全}引人思考。
 
-2. 针对数据链路层以及物理层的监测方案较少
+\textbf{2. 针对数据链路层以及物理层的监测方案较少}
 
 在寻找合适的文章过程中，一个现象是很少有针对数据链路层或物理层进行安全监测的方案。这样的检测是有益的，考虑到
 
@@ -251,7 +252,7 @@ Eduard（2015）提出了一种运作于使用IEEE 802.11协议的局域网上�
 
 但由于数据链路层以及物理层所包含的语义信息较少，各种检测方法有时难以实现较高的准确率。但这不代表这一层上不能够或不应该进行入侵检测。
 
-3. 各层之间的协作
+\textbf{3. 各层之间的协作}
 
 受到DPI启发，充分利用各个层之间的信息也对实现更好的入侵检测是很有帮助的。Peter Schneider等人(autoencoder)文章中所述，一些针对工业联网设备的攻击是控制逻辑上的攻击，也即其内容本身可能符合安全标准，但是多个包连续的组合会产生特定的攻击。这样的攻击，如果能通过最初对字节流的检测，然后更进一步对报文内容进行分析处理，相比可以更进一步提高准确性，并降低虚警率。
 
