@@ -98,7 +98,7 @@
 \textbf{利用NXDomian流量检测DGA}
 
 
-Manos针对基于DGA的DNS攻击，提出了根据NXDomian流量来检测恶意域名的方法。
+Manos(2017)\cite{Manos}针对基于DGA的DNS攻击，提出了根据NXDomian流量来检测恶意域名的方法。
 
 目前，面对僵尸网络这种DNS攻击，最常见的办法是为恶意域名建立黑名单，从而过滤掉对恶意域名的查询。但攻击者利用DGA（域名生成算法）可以由一个种子制造出大量域名，使得黑名单的响应速度远远跟不上恶意域名出现的速度。人们为了应对这种攻击所使用的逆向工程方法，效果并不理想。
 
@@ -135,7 +135,7 @@ HPA相比于FPA和DPA的优势在于其兼容了HTTP2和HTTP1.1中所包含的�
 
 \textbf{通过网页元素表示检测广告注入}
 
-Sajjad Arshad提出了一种通过细粒度的Web内容来源标识来检测基于扩展的广告注入的方法。
+Sajjad Arshad(2016)\cite{Arshad}提出了一种通过细粒度的Web内容来源标识来检测基于扩展的广告注入的方法。
 
 浏览器扩展很好地丰富了Web浏览器的功能，这为用户提供了很大的便利。但由于扩展程序一般拥有较高的权限，因此它也为攻击者提供了一个很好的平台，其中一种威胁就是基于扩展的广告注入。这种广告注入不仅可以通过播放广告来为注入者产生收益，它甚至还能使得网页发布者的合法收入转向第三方；另一方面，它可能会让用户看到不想看的内容，而用户通常不能分清这是来自第三方注入还是来自网页发布者，这给网页发布者造成了口碑上的负面影响。
 
@@ -319,10 +319,16 @@ Garcia-Villegas（2015）\cite{Garcia-Villegas}提出了一种运作于使用IEE
 \begin{thebibliography}{99}
 
 \bibitem{otsu} Otsu, N., "A Threshold Selection Method from Gray-Level Histograms." IEEE Transactions on Systems, Man, and Cybernetics. Vol. 9, No. 1, 1979, pp. 62–66.s
+
 \bibitem{Felix} Felix Erlacher, Falko Dressler, "High Performance Intrusion Detection Using HTTP-Based Payload Aggregation" Local Computer Networks (LCN) 2017 IEEE 42nd Conference on, pp. 418-425, 2017.
 \bibitem{Lichtman} Lichtman, M, Reed, JH, "Anomaly‐based intrusion detection of protocol‐aware jamming." IEEE Military Communications Conference (MILCOM'15); October 26‐28, 2015;Tampa, FL, USA.
 \bititem{Garcia-Villegas} E. Garcia-Villegas, M.S. Afaqui, E. Lopez-Aguilera, "A novel cheater and jammer detection scheme for IEEE 802.11-based wireless LANs." Elsevier J Comput Netw, 86 (2015), pp. 40-56.
 \bititem{Gascon} Gascon H., Ullrich S., Stritter B., Rieck K, "Reading Between the Lines: Content-Agnostic Detection of Spear-Phishing Emails." In: Bailey M., Holz T., Stamatogiannakis M., Ioannidis S. (eds) Research in Attacks, Intrusions, and Defenses. RAID 2018. Lecture Notes in Computer Science, vol 11050. Springer, Cham
+
+\bibitem{Manos} Antonakakis, M., April, T., Bailey, M., Bernhard, M., Bursztein, E., Cochran, J., ... & Kumar, D. (2017). Understanding the mirai botnet. In 26th {USENIX} Security Symposium ({USENIX} Security 17) (pp. 1093-1110)
+
+\bibitem{Arshad} Arshad, S., Kharraz, A., & Robertson, W. (2016, September). Identifying extension-based ad injection via fine-grained web content provenance. In International Symposium on Research in Attacks, Intrusions, and Defenses (pp. 415-436). Springer, Cham.
+
 \end{thebibliography}
 
 \end{document}
