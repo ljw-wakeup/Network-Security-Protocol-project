@@ -61,13 +61,13 @@
 
 ### LIN:
 
-APP LAYER: HTTPS, EMAIL
+APP LAYER: HTTPS请求检测恶意软件, EMAIL，HTTPS载荷聚合检测
 
 TRANS/IP: 网络流数据
 
-DL/PHY: 无线
+DL/PHY: SNR/IEEE802.11 MAC协议
 
-FUTHER WORK：5(非概率方法)
+FUTHER WORK：5(未来方法)
 
 DL/PHY 导言
 
