@@ -116,7 +116,7 @@ Manos(2017)\cite{Manos}针对基于DGA的DNS攻击，提出了根据NXDomian流�
 
 \textbf{基于HTTP的恶意软件检测}
 
-Zhang等提出了良性软件和恶意软件具有不同的HTTP错误生成模式以及HTTP错误的恢复策略模式的见解，并以此作为依据设计了新的系统Error-Sensor，该系统可以仅从HTTP错误以及其附近的成功请求检测恶意软件流量。该文章主要关注的是4xx类状态码指示的HTTP错误，该类状态码用于指示的是由于客户端而导致的错误的情况。恶意软件的活动而生成的HTTP错误大多属于该类别：网络扫描攻击可能会因扫描不存在的目标404 Not Found错误，或者由于扫描受保护路径中的网页而导致403 Forbidden错误，策略违规的请求也会导致403 Forbidden错误。
+Zhang(2018)\cite{Zhang}等提出了良性软件和恶意软件具有不同的HTTP错误生成模式以及HTTP错误的恢复策略模式的见解，并以此作为依据设计了新的系统Error-Sensor，该系统可以仅从HTTP错误以及其附近的成功请求检测恶意软件流量。该文章主要关注的是4xx类状态码指示的HTTP错误，该类状态码用于指示的是由于客户端而导致的错误的情况。恶意软件的活动而生成的HTTP错误大多属于该类别：网络扫描攻击可能会因扫描不存在的目标404 Not Found错误，或者由于扫描受保护路径中的网页而导致403 Forbidden错误，策略违规的请求也会导致403 Forbidden错误。
 
 并非发生HTTP错误就意味着该HTTP发起者为恶意软件，但是基于大量的现实数据，Zhang等观察到良性用户和恶意用户所生成的HTTP错误模式以及其恢复模式存在差异，该差异具体表现为，具体的表现为：受恶意软件影响的客户端通常会产生比良性客户端更多的HTTP错误，并且大多数错误都与恶意软件活动有关。并且，恶意软件生成的错误与良性用户/软件生成的错误具有显着不同的错误生成模式和恢复行为模式。存在这些不同的模式是因为良好的客户端在HTTP错误面前经常缺乏恢复例程。
 
@@ -171,7 +171,7 @@ I. Torroledo等人(2018)实现了第一个利用TLS协议的钓鱼攻击检测�
 
 \textbf{只使用了报头}
 
-Navaporn实现了在不需要人工指定规则的前提下，使用深度学习算法检测网络攻击的方法。该方法只使用了报头的相关信息，并不涉及到载荷，以此保护数据隐私。在数据预处理中，先将通过tcpdump命令获得的pcap格式流量，并删除了数据包的有效负载。然后将包数据转换为流数据。流数据不同于包数据。通常，流数据会包含多个包的信息，而这些包共享一个流数据的标签。流数据是其覆盖的某个通信下的数据包的统计量和基础信息的总结，网络流的元数据包括IP地址，持续状态，历史状态以及包速度，字节速度供16个特征等等。
+Chockwanich(2019)\cite{Chockwanich}实现了在不需要人工指定规则的前提下，使用深度学习算法检测网络攻击的方法。该方法只使用了报头的相关信息，并不涉及到载荷，以此保护数据隐私。在数据预处理中，先将通过tcpdump命令获得的pcap格式流量，并删除了数据包的有效负载。然后将包数据转换为流数据。流数据不同于包数据。通常，流数据会包含多个包的信息，而这些包共享一个流数据的标签。流数据是其覆盖的某个通信下的数据包的统计量和基础信息的总结，网络流的元数据包括IP地址，持续状态，历史状态以及包速度，字节速度供16个特征等等。
 
 在该文章的方法中，使用网络流的16个元数据作为特征供神经网络训练。为了检测和对攻击方式进行分类，该文章使用了RNN, Staked RNN, CNN神经网络进行训练，并检测了Dos攻击， 端口扫描，使用UDP发网络扫描，使用TCP的网络扫描，以及使用ICMP的网络扫描这五种攻击，并实现了对这些攻击的分类。同时，为了进行比较，将同样的数据包放到Snort系统中检测。Snort是一个基于规则的入侵检测系统，但是其使用载荷信息进行分析，并且计算的时间很长。测试结果表明，该方案优于基于规则的Snort入侵检测系统。
 
@@ -324,9 +324,9 @@ Garcia-Villegas（2015）\cite{Garcia-Villegas}提出了一种运作于使用IEE
 \bibitem{Lichtman} Lichtman, M, Reed, JH, "Anomaly‐based intrusion detection of protocol‐aware jamming." IEEE Military Communications Conference (MILCOM'15); October 26‐28, 2015;Tampa, FL, USA.
 \bititem{Garcia-Villegas} E. Garcia-Villegas, M.S. Afaqui, E. Lopez-Aguilera, "A novel cheater and jammer detection scheme for IEEE 802.11-based wireless LANs." Elsevier J Comput Netw, 86 (2015), pp. 40-56.
 \bititem{Gascon} Gascon H., Ullrich S., Stritter B., Rieck K, "Reading Between the Lines: Content-Agnostic Detection of Spear-Phishing Emails." In: Bailey M., Holz T., Stamatogiannakis M., Ioannidis S. (eds) Research in Attacks, Intrusions, and Defenses. RAID 2018. Lecture Notes in Computer Science, vol 11050. Springer, Cham
-
+\bititem{Chockwanich} N. Chockwanich and V. Visoottiviseth, "Intrusion Detection by Deep Learning with TensorFlow," 2019 21st International Conference on Advanced Communication Technology (ICACT), PyeongChang Kwangwoon_Do, Korea (South), 2019, pp. 654-659.
 \bibitem{Manos} Antonakakis, M., April, T., Bailey, M., Bernhard, M., Bursztein, E., Cochran, J., ... & Kumar, D. (2017). Understanding the mirai botnet. In 26th {USENIX} Security Symposium ({USENIX} Security 17) (pp. 1093-1110)
-
+\bibitem{Zhang}Zhang J., Jang J., Gu G., Stoecklin M.P., Hu X. (2018) Error-Sensor: Mining Information from HTTP Error Traffic for Malware Intelligence. In: Bailey M., Holz T., Stamatogiannakis M., Ioannidis S. (eds) Research in Attacks, Intrusions, and Defenses. RAID 2018. Lecture Notes in Computer Science, vol 11050. Springer, Cham
 \bibitem{Arshad} Arshad, S., Kharraz, A., & Robertson, W. (2016, September). Identifying extension-based ad injection via fine-grained web content provenance. In International Symposium on Research in Attacks, Intrusions, and Defenses (pp. 415-436). Springer, Cham.
 
 \end{thebibliography}

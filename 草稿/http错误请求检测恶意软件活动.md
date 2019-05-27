@@ -1,3 +1,5 @@
+<https://link.springer.com/chapter/10.1007%2F978-3-030-00470-5_22>
+
 We note that network failures caused by malware are quite different from the failures caused by benign users/software in terms of their failure patterns and recovery behavior patterns.
 
 in light of 鉴于
