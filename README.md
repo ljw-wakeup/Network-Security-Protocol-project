@@ -61,6 +61,8 @@
 
 ### LIN:
 
+文章整体润色
+
 APP LAYER: HTTPS请求检测恶意软件, EMAIL，HTTPS载荷聚合检测
 
 TRANS/IP: 网络流数据
@@ -80,6 +82,10 @@ FUTHER WORK: 1(数据) 2(面向连接网络) 4(3种攻击)
 APP LAYER 导言
 
 ### HU:
+
+文章整体润色
+
+导言部分
 
 TRANS/IP: TLS, IP ENTROPY, Traceroute-DoS, PFA
 
