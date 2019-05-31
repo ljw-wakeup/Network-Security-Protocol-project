@@ -122,7 +122,7 @@ Manos(2017)\cite{Manos}针对基于域名生成算法(DGA)的DNS攻击，提出�
 \begin{figure}
 	\caption{Pleiades系统示意图}
 	\label{dga_pic}
-	\includegraphics[width = \linewidth]{./pics/dga}
+	\includegraphics[width = \linewidth]{./pics/dga.jpg}
 \end{figure}
 
 此模型可以被部署在本地的DNS服务器。在这里，它首先会收集NXDomian流量，对这些域名送到模型中NXDomain Clustering模块进行聚类。聚类后在DGA Modeling模块中与已知DGA作比较，若吻合，则将它们归类到那一种DGA中;若不吻合，则利用将这一类特征归为新的DGA，并对其建模、存储在新DGA模型中，留待与之后比较。当完成这样的工作后，由某个DGA所产生的恶意域名会大概率被检测到与某一个DGA的特征相吻合，从而可以将它列入黑名单中。
@@ -350,7 +350,7 @@ Garcia-Villegas(2015)\cite{Garcia-Villegas}提出了一种针对检测作弊行�
 
 第\ref{protocol}节中导言，利用NXDomian流量检测DGA，通过网页元素表示检测广告注入、第\ref{future}章中关于数据来源、关于面向连接型网络、关于NIDS面向的攻击类型及文章润色由李锭轩同学负责。
 
-第\ref{protocol}节中基于HTTP的恶意软件检测，负载聚合技术，鱼叉式钓鱼邮件检测、第\ref{ip}节使用数据报报头信息进行检测、第\ref{phy}中导言，基于信噪比，802.11的检测及文章整体润色由林静雯同学负责。
+第\ref{protocol}节中基于HTTP的恶意软件检测，负载聚合技术，鱼叉式钓鱼邮件检测、第\ref{ip}节使用数据报报头信息进行检测、第\ref{phy}节中导言，基于信噪比，802.11的检测及文章整体润色由林静雯同学负责。
 
 第\ref{intro}章、第\ref{ip}节中导言，使用TLS证书，熵和评分方法，目标链路泛洪攻击，有限状态机检测进行检测、第\ref{phy}节直接利用字节流进行入侵检测、第\ref{future}章关于协议栈各层内容、文章整体润色及协调统筹由胡冬寅同学负责。
 

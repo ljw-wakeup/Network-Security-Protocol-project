@@ -63,36 +63,38 @@
 
 文章整体润色
 
-APP LAYER: HTTPS请求检测恶意软件, EMAIL，HTTPS载荷聚合检测
-
-TRANS/IP: 网络流数据
-
-DL/PHY: SNR/IEEE802.11 MAC协议
-
-FUTHER WORK：5(未来方法)
-
 DL/PHY 导言
+
+APP LAYER: 基于HTTP的恶意软件检测, 基于HTTP的负载聚合技术, 基于非文本特征的鱼叉式钓鱼邮件检测
+
+TRANS/IP: 使用数据报报头信息进行检测
+
+DL/PHY: 基于信噪比的干扰攻击入侵检测, 基于802.11的欺骗与干扰检测
+
+FUTHER WORK：5(使用非统计方法)
 
 ### LI:
 
 文章润色
 
-APP LAYER: DNS(DGA), 广告插入
-
-FUTHER WORK: 1(数据) 2(面向连接网络) 4(3种攻击)
-
 APP LAYER 导言
+
+APP LAYER: 利用NXDomian流量检测DGA, 通过网页元素表示检测广告注入
+
+FUTHER WORK: 1(数据来源) 2(面向连接型网络) 4(NIDS检测的攻击类型)
 
 ### HU:
 
+协调通从绘画
+
 文章整体润色
 
-导言部分
-
-TRANS/IP: TLS, IP ENTROPY, Traceroute-DoS, PFA
-
-DL/PHY: autoencoder
+整体导言部分
 
 TRANS/IP导言
 
-FUTHER WORK: 3(不同层)
+TRANS/IP: 使用TLS证书进行检测, 使用熵和评分方法检测, 检测新型DDoS攻击——目标链路泛洪攻击, 使用有限状态机检测TCP拥塞攻击
+
+DL/PHY: 直接利用字节流进行入侵检测
+
+FUTHER WORK: 3(协议栈各层)
